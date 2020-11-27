@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Форми</h1>
+        <div class="simple-form">
+            <h2>01. проста форма</h2>
+            <form action="sendmail.php" method="post">
+                <p><label class="simple"><input class="textinput" type="text" name="user_name"
+                            placeholder="Введіть ім'я" maxlength="30" /></label></p>
+                <p><label class="simple"><input class="textinput" type="email" name="user_email" placeholder="Email"
+                            maxlength="30" /></label></p>
+                <p class="city-select">
+                    <label class="simple-select" for="city">
+                        <select class="selectinput" id="city" name="city">
+                            <option class="option-simple" disabled selected value="your_city">Ваше
+                                місто</option>
+                            <option class="option-simple" value="kyiv">Київ</option>
+                            <option class="option-simple" value="lviv">Львів</option>
+                            <option class="option-simple" value="khm">Хмельницький</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label class="simple">
+                        <textarea class="simple-textarea" name="comment" placeholder="Email"
+                            resize="vertical"></textarea>
+                    </label>
+                </p>
+                <p>
+                    <label class="simple">
+                        <input class="simple-button" type="submit" value="Зареєструватися" />
+                    </label>
+                </p>
+            </form>
+        </div>
+        <hr>
+        <div class="elements">
+            <h2>02. елементи</h2>
+            <form class="second clear" action="send.php" method="POST">
+                <div class="radio-buttons">
+                    <p>
+                        <input class="delivery" type="radio" id="new_post" name="radio"/>
+                        <label for="new_post">Нова Пошта</label>
+                    </p>
+                    <p>
+                        <input class="delivery" type="radio" id="courier" name="radio"/>
+                        <label for="courier">Кур'єр</label>
+                    </p>
+                    <p>
+                        <input class="delivery" disabled type="radio" id="export" name="radio"/>
+                        <label for="export">Самовивіз</label>
+                    </p>
+                </div>
+                <div class="check-buttons">
+                    <p>
+                        <input class="delivery2" type="checkbox" id="terms_contract"/>
+                        <label for="terms_contract">Прочитав умови договору</label>
+                    </p>
+                    <p>
+                        <input class="delivery2" type="checkbox" id="agree_VAT"/>
+                        <label for="agree_VAT">Згідний з ПДВ 9%</label>
+                    </p>
+                    <p>
+                        <input class="delivery2" disabled type="checkbox" id="receive_news"/>
+                        <label for="receive_news">Отримувати новини на ел. пошту</label>
+                    </p>
+                </div>
+                <div class="date">
+                    <table class="status">
+                        <tr>
+                            <td>Статус</td>
+                            <td>
+                                <input class="delivery2" type="checkbox" id="new_items"/>
+                                <label for="new_items">Новинки</label>
+                                <input class="delivery2" type="checkbox" id="promotional-goods"/>
+                                <label for="promotional-goods">Акційні товари</label>
+                                <input class="delivery2" type="checkbox" id="sale"/>
+                                <label for="sale">Розпродаж</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Дата</td>
+                            <td>
+                                <label for="date"></label>
+                                <input class="data" type="date" name="date" selected value="2018-03-17" id="date">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </form>
+        </div>
+        <hr>
+        <div class="style-checkbox clear">
+            <h2 class="st-checks">03. стилізовані чекбокси</h2>
+            <div class="style-radio">
+                <p>
+                    <input class="radio-man" type="radio" id="man" name="gender"/>
+                    <label for="man">Чоловік</label>
+                </p>
+                <p>
+                    <input class="radio-woman" type="radio" id="woman" name="gender"/>
+                    <label for="woman">Жінка</label>
+                </p>
+            </div>
+            <div class="style-check">
+                <p>
+                    <input class="other" type="checkbox" id="news"/>
+                    <label for="news">Отримувати новини</label>
+                </p>
+                <p>
+                    <input class="other" type="checkbox" id="buy"/>
+                    <label for="buy">Купити додому ковбаси</label>
+                </p>
+                <p>
+                    <input class="other" type="checkbox" id="light"/>
+                    <label for="light">Включити світло</label>
+                </p>
+            </div>
+
+        </div>
+        <hr>
+        <div class="form-table">
+            <h2>04. форма таблицею</h2>
+            <form action="registration.php" method="post">
+                <table class="table_form">
+                    <tr>
+                        <td class="tform-heading" colspan="2">Заповніть усі необхідні поля</td>
+                    </tr>
+                    <tr>
+                        <td><label class="fullname" for="fio">фіо:</label></td>
+                        <td><input class="tform-text" type="text" id="fio" name="names" required placeholder="Введіть ім'я" maxlength="35" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="p-w">Пароль:</label></td>
+                        <td><input class="tform-text" type="password" id="p-w" name="user_p-w" required placeholder="Введіть не менше 6 символів" minlength="6" maxlength="25" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="tform-select" for="town">Місто:</label></td>
+                        <td>
+                            <select class="town-select" id="town" name="town">
+                                <option class="option-tform" selected value="khmel">Хмельницький</option>
+                                <option class="option-tform" value="kyiv2">Київ</option>
+                                <option class="option-tform" value="lviv2">Львів</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Стать:</td>
+                        <td>
+                            <input class="r-men" type="radio" id="men" name="gender-radio"/>
+                            <label for="men">Чоловік</label>
+                            <input class="r-women" type="radio" id="women" name="gender-radio"/>
+                            <label for="women">Жінка</label>
+                        </td>
+                    </tr>               
+                    <tr>
+                        <td><label for="file-button">Фото:</label></td>
+                        <td>
+                            <div class="upload-file">
+                                <label for="file-button">
+                                <input class="upload" type="file" id="file-button" name="photo" />
+                                <span>Виберіть файл</span>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="commit">
+                        <td  class="tform-commit"><label for="table-textarea">Коментарій:</label></td>
+                        <td><textarea class="tform-textarea" id="table-textarea" name="tform-comment" placeholder="Введіть текст повідомлення" resize="vertical"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><label><input class="tform-button" type="submit" value="Зареєструватися" /></label></td>
+                    </tr>        
+                </table>
+            </form>
+        </div>
+        <hr>
+        <div class="form-table5">
+            <h2>05. форма таблицею</h2>
+            <form action="fifth-form.php" method="POST">
+                <table class="tf1">
+                    <tr>
+                        <td colspan="3">Оформлення заявки</td>
+                    </tr>
+                    <tr>
+                        <td><label for="f_i">Прізвище та ім'я</label></td>
+                        <td><label for="mail">Ел. пошта</label></td>
+                        <td><label for="phone">Телефон</label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="tform-text5 table5" type="text" id="f_i" name="name5" value="Василь Вірастюк" required maxlength="30" /></td>
+                        <td><input class="tform-text5 table5" type="email" id="mail" name="user_email5" required maxlength="30" /></td>
+                        <td><input class="tform-text5 table5" type="tel" id="phone" name="user_tel5" required maxlength="15" /></td>
+                    </tr>
+                </table>
+                <hr class="hr-line1">
+                <table class="tf2">
+                    <tr>
+                        <td><label class="tform-select5" for="country">Країна</label></td>
+                        <td colspan="2"><label for="address">Адреса</label></td>
+                    </tr>
+                    <tr>
+                        <td class="td-country">
+                        <select class="country-select table5" id="country" name="country">
+                            <option class="option-tform5 table5" selected value="ind">Індонезія</option>
+                            <option class="option-tform5 table5" value="ua">Україна</option>
+                            <option class="option-tform5 table5" value="en">Англія</option>
+                        </select>
+                        </td>
+                        <td colspan="2"><input class="adds table5" type="text" id="address" name="adresa" maxlength="50" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="town5">Місто</label></td>
+                        <td><label for="house">Будинок</label></td>
+                        <td><label for="postcode">Поштовий індекс</label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="gorod table5" type="text" id="town5" name="misto" maxlength="30" /></td>
+                        <td><input class="table5" type="number" id="house" name="house"/></td>
+                        <td><input class="table5" type="number" id="postcode" name="post-index"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input class="agree" type="checkbox" id="rule"/>
+                            <label class="accept" for="rule">Я погоджуюсь з правилами оплати та доставки товару</label>
+                        </td>
+                    </tr>
+                </table>
+                <hr class="hr-line2">
+                <p class="clear">
+                    <label><input class="tform-button5 tform5-back" type="button" value="Повернутися назад" onclick="history.back(-1)"  /></label>
+                    <label><input class="tform-button5 tform5-submit" type="submit" value="Оформити покупку" /></label>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

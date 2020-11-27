@@ -1,0 +1,618 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.eot');
+    src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.ttf') format('truetype'),
+        url('../fonts/Roboto-Bold.svg#../fonts/Roboto-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.eot');
+    src: url('../fonts/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff'),
+        url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body{
+    margin: 0;
+    font-family:'Roboto', sans-serif;
+}
+input,
+select,
+textarea{
+    box-sizing: border-box;
+}
+.wrapper{
+    margin: 0 auto;
+    max-width: 990px;
+}
+h1{
+    color: #1f222c;
+    font: 700 30px "Roboto Slab";
+    text-align: center;
+}
+h2{
+    color: #b3b3b3;
+    letter-spacing: 0px;
+    font: 700 20px "Roboto";
+    text-transform: uppercase;
+}
+hr{
+    margin: 48px 0;
+    border: 1px solid #dcdcde;
+}
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*01. проста форма*/
+
+.simple-form{
+    max-width: 330px;
+}
+.tform-text,
+.textinput{
+    color: #b3b3b3;
+    font: 400 14px "Roboto";
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.textinput{
+    padding: 15px 15px 12px;
+}
+.town-select,
+.selectinput{
+    padding: 15px 15px 12px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+.option-tform,
+.option-simple{
+    display: block;
+    padding: 10px;
+    min-height: 35px;
+    color: #1f222c;
+    font: 400 14px "Roboto";
+}
+.option-simple:disabled{
+    color: #b3b3b3;
+}
+.tform-select5,
+.tform-select,
+.simple-select{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.tform-select5:after,
+.tform-select:after,
+.simple-select:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 9px;
+    height: 5px;
+    background-image: url(../img/select.png);
+}
+.simple-select:after{
+    right: 15px;
+    top: 19px;
+}
+.simple-textarea{
+    padding: 15px 15px 12px;
+    color: #b3b3b3;
+    font: 400 14px "Roboto";
+    width: 100%;
+    max-width: 330px;
+    height: 130px;
+    max-height: 130px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.simple-button,
+.tform-button{
+    padding: 15px 15px 12px;
+    width: 100%;
+    color: #fff;
+    font: 700 14px "Roboto";
+    text-align: center;
+    border-radius: 3px;
+    background-color: #12d661;
+    border: none;
+    cursor: pointer;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus{
+    color: #1f222c;
+    font: 400 14px "Roboto";
+    box-shadow: 0 0 2.5px rgba(62,106,255,0.55);
+    border: 1px solid #3e6aff;
+    outline: none;
+}
+.option-tform:focus,
+.option-simple:focus{
+    display: block;
+    padding: 10px;
+    max-height: 35px;
+    color: #fff;
+    background-color: #3e6aff;
+    border: 1px solid #3e6aff;
+    outline: none;
+}
+input[type="submit"]:hover{
+    box-shadow: 0px 2px 2.5px rgba(8,118,52,0.35);
+    outline: none;
+    cursor: pointer;
+}
+
+/*02. елементи*/
+
+.radio-buttons,
+.check-buttons,
+.date{
+    float: left;
+    vertical-align: top;
+}
+.radio-buttons p:first-child,
+.check-buttons p:first-child{
+    margin-top: 0;
+}
+.radio-buttons{
+    max-width: 165px;
+    width: 100%;
+}
+.check-buttons{
+    max-width: 345px;
+    width: 100%;
+}
+.date{
+    max-width: 473px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+.status{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+}
+.delivery,
+.delivery2,
+.radio-man,
+.radio-woman,
+.other,
+.r-men,
+.r-women,
+.agree{
+    position: absolute;
+    visibility: hidden;
+}
+.agree,
+.r-men+label,
+.r-women+label,
+.delivery+label,
+.delivery2+label{
+    position: relative;
+    padding-left: 25px;
+    color: #1f222c;
+    font: 400 14px "Roboto";
+}
+.delivery:disabled+label,
+.delivery2:disabled+label{
+    color: #b3b3b3;
+}
+.r-men+label:before,
+.r-women+label:before,
+.delivery+label:before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+    left: 0;
+    top: -2px;
+}
+.r-men:checked+label:before,
+.r-women:checked+label:before,
+.delivery:checked+label:before,
+.delivery2:checked+label:before{
+    border: 1px solid #3e6aff;
+}
+.r-men:checked+label:after,
+.r-women:checked+label:after,
+.delivery:checked+label:after{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 5px;
+    top: 3px;
+    border-radius: 50%;
+    background-color: #3e6aff;
+}
+.agree+label:before,
+.delivery2+label:before{
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    top: -2px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.agree:checked+label:before,
+.delivery2:checked+label:before{
+    border: 1px solid #3e6aff;
+}
+.agree:checked+label:after,
+.delivery2:checked+label:after{
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 4px;
+    left: 5px;
+    top: 4px;
+    transform: rotate(-45deg);
+    border-left: 2px solid #244dd7;
+    border-bottom: 2px solid #244dd7;
+    border-radius: 5px;
+}
+.status td:first-child{
+    padding: 18px 18px 12px;
+    text-align: left;
+    color: #b3b3b3;
+    font: 700 14px "Roboto";
+    width: 20.5%;
+}
+.data,
+.data:focus{
+    padding: 10px;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+::-webkit-calendar-picker-indicator {
+    background-image: url(../img/calendar.png);
+    outline: none;
+}
+.date .delivery2+label{
+    margin-right: 20px;
+}
+.status tr{
+    vertical-align: text-bottom;
+}
+.status tr:last-child td{
+    padding-bottom: 20px;
+}
+
+/*03. стилізовані чекбокси*/
+
+.st-checks{
+    margin-bottom: 60px;
+}
+.style-radio{
+    max-width: 440px;
+    width: 100%;
+}
+.style-radio,
+.style-check{
+    float: left;
+    vertical-align: text-bottom;
+}
+.radio-man+label,
+.radio-woman+label{
+    position: relative;
+    padding-left: 82px;
+    color: #1f222c;
+    font: 700 16px "Roboto";
+}
+.other+label{
+    position: relative;
+    padding-left: 62px;
+    color: #1f222c;
+    font: 400 14px "Roboto";
+}
+.radio-man+label:before,
+.radio-woman+label:before,
+.radio-man:checked+label:before,
+.radio-woman:checked+label:before{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 0;
+    top: -27px;
+    background: url(../img/style-check.png) no-repeat;
+}
+.radio-man+label:before{
+    background-position: 0 0;
+}
+.radio-woman+label:before{
+    background-position: -96px 0;
+}
+.radio-man:checked+label:before{
+    background-position: 0 -96px;
+}
+.radio-woman:checked+label:before{
+    background-position: -97px -96px;
+}
+.style-radio p{
+    margin: 55px 0;
+}
+.style-check p:first-child,
+.style-radio p:first-child{
+    margin-top: 0;
+}
+.style-radio p:last-child{
+    margin-bottom: 16px;
+}
+.style-check p:not(p:last-child){
+    margin-bottom: 30px;
+}
+.other+label:before{
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: #cfcfd1;
+    left: 0;
+    top: -5px;
+    transition: all .5s ease;
+}
+.other:checked+label:before{
+    background-color: #3e6aff;
+}
+.other+label:after{
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 10px;
+    box-shadow: 0 0 2.5px rgba(0,0,0,0.5);
+    background-color: #fff;
+    left: 2.5px;
+    top: -3px;
+    transition: all .5s ease;    
+}
+.other:checked+label:after{
+    left: 22.5px;
+}
+
+/*04. форма таблицею*/
+
+.form-table{
+    max-width: 500px;
+}
+.table_form{
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+.tform-heading{
+    color: #1f222c;
+    font: 700 18px "Roboto"
+}
+.fullname{
+    text-transform: uppercase;
+}
+.tform-text{
+    padding: 12px;
+}
+.table_form td:not(.tform-heading):not(td:last-child){
+    max-width: 160px;
+    width: 100%;
+    color: #1f222c;
+    font: 400 14px "Roboto";
+}
+.table_form td:last-child{
+    max-width: 340px;
+}
+.tform-select:after{
+    top: 9px;
+    right: -317px;
+}
+.r-men+label{
+    margin-right: 20px;
+}
+.upload{
+    display: none;
+}
+.upload-file{
+    display: block;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    max-width: 340px;
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    font: 700 14px "Roboto";
+    border-radius: 3px;
+    background-color: #3e6aff;
+}
+.upload-file:hover{
+    box-shadow: 0px 2px 2.5px rgba(15,40,126,0.35);
+    background-color: #2857f4;
+    cursor: pointer;
+}
+.upload-file span:hover{
+    cursor: pointer;
+}
+.tform-textarea{
+    padding: 15px 15px 12px;
+    color: #b3b3b3;
+    font: 400 14px "Roboto";
+    width: 100%;
+    max-width: 340px;
+    height: 130px;
+    max-height: 130px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.table_form tr{
+    vertical-align: text-bottom;
+}
+.table_form td{
+    padding-bottom: 15px;
+}
+.table_form td:first-child{
+    padding-bottom: 20px;
+}
+.tform-commit{
+    vertical-align: top;
+}
+.tform-commit label{
+    display: inline-block;
+    padding-top: 15px;
+    top: 15px;    
+}
+
+/*05. форма таблицею*/
+
+.form-table5{
+    max-width: 680px;
+    width: 100%;
+}
+.tf1,
+.tf2{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table5,
+select.country-select{
+    padding: 10px 15px;
+    max-width: 220px;
+    width: 100%;
+    color: #1f222c;
+    font: 400 14px "Roboto";
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.adds{
+    max-width: 450px;
+}
+.tf1 label,
+.tf2 label{
+    color: #b3b3b3;
+    font: 400 13px "Roboto";
+}
+.country-select{
+    appearance: none;
+}
+.tform-select5:after{
+    right: 22px;
+    top: 40px;
+}
+.tform-select5:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 19px;
+    right: 42px;
+    top: 32px;
+    background-color: #ccc;
+}
+.tf2 .accept{
+    color: #1f222c;
+    font: 400 14px "Roboto";
+}
+.tf1 tr:nth-child(even) td,
+.tf2 tr:nth-child(odd) td{
+    padding: 15px 0 5px;    
+}
+.form-table5 hr{
+    margin-top: 0;
+    border: 1px solid #e9e9e9;
+}
+.hr-line1{
+    margin-bottom: 7px;
+}
+.tf2 tr:nth-child(4) td{
+    padding-bottom: 7px;
+}
+.tf1,
+.hr-line2{
+    margin-bottom: 30px;
+}
+.tf2{
+    margin-bottom: 20px;
+}
+.tform5-submit{
+    float: right;
+    padding: 15px 5px 10px;
+    max-width: 180px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font: 700 14px "Roboto";
+    border-radius: 3px;
+    background-color: #12d661;
+    border: none;
+}
+.tform5-back{
+    padding: 15px 5px 10px;
+    max-width: 180px;
+    width: 100%;
+    text-align: center;
+    color: #6e6f77;
+    font: 700 14px "Roboto";
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #85868d;
+    outline: none;
+}
+.tform5-back:hover{
+    color: #fff;
+    background-color: #85868d;
+    cursor: pointer;
+}
+/*select.country-select{
+    content: '';
+    display: block;
+    appearance: none;
+    width: 9px;
+    height: 5px;
+    right: 22px;
+    top: 40px;
+    background: url(../img/select.png) no-repeat;
+    background-size: 9px 5px;
+}
+*/
