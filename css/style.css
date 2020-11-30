@@ -215,11 +215,12 @@ input[type="submit"]:hover{
 .other,
 .r-men,
 .r-women,
-.agree{
+.agree,
+.remember_pw{
     position: absolute;
     visibility: hidden;
 }
-.agree,
+.agree+label,
 .r-men+label,
 .r-women+label,
 .delivery+label,
@@ -245,6 +246,8 @@ input[type="submit"]:hover{
     left: 0;
     top: -2px;
 }
+.remember_pw:checked+label:before,
+.agree:checked+label::before,
 .r-men:checked+label:before,
 .r-women:checked+label:before,
 .delivery:checked+label:before,
@@ -263,6 +266,7 @@ input[type="submit"]:hover{
     border-radius: 50%;
     background-color: #3e6aff;
 }
+.remember_pw+label:before,
 .agree+label:before,
 .delivery2+label:before{
     content: '';
@@ -275,10 +279,12 @@ input[type="submit"]:hover{
     border: 1px solid #ccc;
     background-color: #fff;
 }
+.remember_pw:checked+label:before,
 .agree:checked+label:before,
 .delivery2:checked+label:before{
     border: 1px solid #3e6aff;
 }
+.remember_pw:checked+label:after,
 .agree:checked+label:after,
 .delivery2:checked+label:after{
     content: '';
@@ -616,3 +622,93 @@ select.country-select{
     background-size: 9px 5px;
 }
 */
+
+/*06. фіксована форма*/
+.fixed_form6{
+    position: fixed;
+    top: 62px;
+    left: auto;
+    right: 15.5%;
+    max-width: 310px;
+    width: 100%;
+}
+.fixed_form{
+    max-width: 310px;
+    width: 100%;
+    box-shadow: 0px 5px 6px rgba(0,0,0,0.15);
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+}
+.close{
+    position: relative;
+}
+.close:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 10px;
+    left: 288px;
+    top: 21px;
+    transform: rotate(-45deg);
+    border-left: 1px solid #b3b3b3;
+}
+.close:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 10px;
+    left: 288px;
+    top: 22px;
+    transform: rotate(45deg);
+    border-left: 1px solid #b3b3b3;
+}
+.open-button{
+    visibility: hidden;
+}
+
+#close-form:active{
+    visibility: visible;
+    display: none;
+}
+#open-form6:active{
+    display: block;
+}
+.fixed{
+    padding: 10px;
+    max-width: 260px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.fixed-label{
+    color: #b3b3b3;
+    font: 400 13px "Roboto";
+}
+.forget_pw{
+    color: #3e6aff;
+    font: 400 13px "Roboto";
+    text-decoration: none;
+}
+.remember-label{
+    color: #1f222c;
+    font: 400 13px "Roboto";
+}
+.remember_pw+label{
+    position: relative;
+    padding-left: 25px;
+}
+.fixed-submit{
+    padding: 10px;
+    max-width: 260px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #12d661;
+    color: #fff;
+    font: 700 14px "Roboto";
+    text-align: center;
+    border: none;
+}
