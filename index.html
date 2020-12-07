@@ -245,26 +245,30 @@
                 </p>
             </form>
         </div>
-        <div class="fixed_form6">
-        <h2>06. фіксована форма</h2>
-            <div class="fixed_form" id="open-popup">
-                <a class="close" href="#open-form6" id="close-form"></a>
-                <form class="form6" action="sign_in.php" method="post">
+        <div class="fixed-forma">
+            <a class="close close-form6" href="#open-form6" id="close-form"></a>
+            <div class="fixed_form6" id="open-popup">
+            <h2>06. фіксована форма</h2>
+                <div class="fixed_form">
+                    <a class="close close-form6"></a>
+                    <form class="form6" action="sign_in.php" method="post">
+                    
+                        <p><label for="fixed-login" class="fixed-label"><span class="fixed-span">Логін</span></label>
+                        <p><input class="fixed" type="text" name="login" id="fixed-login" required maxlength="30" /></p>
+                        <p><label for="fixed-pw" class="fixed-label"><span class="fixed-span">Пароль</span></label></p>
+                        <p><input class="fixed" type="password" id="fixed-pw" name="parole" required maxlength="25" /></p>
+                        <p><a href="#" class="forget_pw"><span class="fixed-span">Забули пароль?</span></a></p>
+                        <p class="p-pw">
+                            <input class="remember_pw" type="checkbox" id="remember"/>
+                            <label class="remember-label" for="remember"><span class="fixed-span6">Запам'ятати пароль</span></label>
+                        </p>
+                        <p>
+                            <label class="fixed-button"><input class="fixed-submit" type="submit" value="Увійти" /></label>
+                        </p>
+                    
+                    </form>
+                </div>
                 
-                    <p><label for="fixed-login" class="fixed-label">Логін</label>
-                    <p><input class="fixed" type="text" name="login" id="fixed-login" required maxlength="30" /></p>
-                    <p><label for="fixed-pw" class="fixed-label">Пароль</label></p>
-                    <p><input class="fixed" type="password" id="fixed-pw" name="parole" required maxlength="25" /></p>
-                    <a href="#" class="forget_pw">Забули пароль?</a>
-                    <p>
-                        <input class="remember_pw" type="checkbox" id="remember"/>
-                        <label class="remember-label" for="remember">Запам'ятати пароль</label>
-                    </p>
-                    <p>
-                        <label><input class="fixed-submit" type="submit" value="Увійти" /></label>
-                    </p>
-                
-                </form>
             </div>
             <a class="open-button" href="#open-popup" id="open-form6">Відкрити форму для входу</a>
         </div>

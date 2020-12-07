@@ -35,6 +35,7 @@
 body{
     margin: 0;
     font-family:'Roboto', sans-serif;
+    padding-bottom: 190px;
 }
 input,
 select,
@@ -43,7 +44,7 @@ textarea{
 }
 .wrapper{
     margin: 0 auto;
-    max-width: 990px;
+    max-width: 69.2%;
 }
 h1{
     color: #1f222c;
@@ -85,12 +86,15 @@ hr{
 }
 .town-select,
 .selectinput{
+    position: relative;
     padding: 15px 15px 12px;
     width: 100%;
     border-radius: 3px;
-    background-color: #fff;
+    background-color: transparent;
     border: 1px solid #ccc;
     appearance: none;
+    z-index: 1;
+    cursor: pointer;
 }
 .option-tform,
 .option-simple{
@@ -109,6 +113,8 @@ hr{
     position: relative;
     display: inline-block;
     width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
 }
 .tform-select5:after,
 .tform-select:after,
@@ -119,6 +125,7 @@ hr{
     width: 9px;
     height: 5px;
     background-image: url(../img/select.png);
+    z-index: 0;
 }
 .simple-select:after{
     right: 15px;
@@ -540,7 +547,11 @@ select.country-select{
     font: 400 13px "Roboto";
 }
 .country-select{
+    position: relative;
     appearance: none;
+    background-color: transparent;
+    z-index: 1;
+    cursor: pointer;
 }
 .tform-select5:after{
     right: 22px;
@@ -555,6 +566,7 @@ select.country-select{
     right: 42px;
     top: 32px;
     background-color: #ccc;
+    z-index: 0;
 }
 .tf2 .accept{
     color: #1f222c;
@@ -624,24 +636,32 @@ select.country-select{
 */
 
 /*06. фіксована форма*/
+
 .fixed_form6{
     position: fixed;
     top: 62px;
     left: auto;
-    right: 15.5%;
+    right: 15.4%;
     max-width: 310px;
     width: 100%;
 }
 .fixed_form{
+    position: relative;
     max-width: 310px;
     width: 100%;
     box-shadow: 0px 5px 6px rgba(0,0,0,0.15);
     background-color: #fafafa;
     border: 1px solid #e6e6e6;
     border-radius: 5px;
+    box-sizing: border-box;
+}
+.form6{
+    padding-left: 25px;
 }
 .close{
     position: relative;
+    display: block;
+    margin-bottom: 3px;
 }
 .close:before{
     content: '';
@@ -649,8 +669,8 @@ select.country-select{
     display: block;
     width: 2px;
     height: 10px;
-    left: 288px;
-    top: 21px;
+    left: 293px;
+    top: 8px;
     transform: rotate(-45deg);
     border-left: 1px solid #b3b3b3;
 }
@@ -660,20 +680,21 @@ select.country-select{
     display: block;
     width: 2px;
     height: 10px;
-    left: 288px;
-    top: 22px;
+    left: 293px;
+    top: 9px;
     transform: rotate(45deg);
     border-left: 1px solid #b3b3b3;
 }
 .open-button{
     visibility: hidden;
 }
-
-#close-form:active{
+.close:active .open-button{
     visibility: visible;
+}
+.close:active+.fixed_form6{
     display: none;
 }
-#open-form6:active{
+.open-button:active .fixed_form6{
     display: block;
 }
 .fixed{
@@ -701,8 +722,12 @@ select.country-select{
     position: relative;
     padding-left: 25px;
 }
+.p-pw{
+    padding-bottom: 6px;
+}
 .fixed-submit{
     padding: 10px;
+    margin-bottom: 20px;
     max-width: 260px;
     width: 100%;
     border-radius: 3px;
@@ -711,4 +736,30 @@ select.country-select{
     font: 700 14px "Roboto";
     text-align: center;
     border: none;
+}
+.fixed_form6 label,
+.forget_pw{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.fixed-span,
+.remember-label{
+    position: absolute;
+    top: -7px;
+}
+.fixed_span6{
+    position: absolute;
+    bottom: 0;
+}
+.remember-label{
+    position: absolute;
+    top: 6px;
+}
+.fixed-button{
+    position: absolute;
+    top: 6px;
+}
+.fixed_form6 p{
+    margin: 9px 0;
 }
