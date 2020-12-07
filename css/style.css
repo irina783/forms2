@@ -137,8 +137,10 @@ hr{
     font: 400 14px "Roboto";
     width: 100%;
     max-width: 330px;
+    min-width: 330px;
     height: 130px;
     max-height: 130px;
+    min-height: 50px;
     border-radius: 3px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -355,6 +357,10 @@ input[type="submit"]:hover{
     color: #1f222c;
     font: 700 16px "Roboto";
 }
+.radio-man:checked+label,
+.radio-woman:checked+label{
+    color: #3e6aff;
+}
 .other+label{
     position: relative;
     padding-left: 62px;
@@ -493,8 +499,10 @@ input[type="submit"]:hover{
     font: 400 14px "Roboto";
     width: 100%;
     max-width: 340px;
+    min-width: 340px;
     height: 130px;
     max-height: 130px;
+    min-height: 50px;
     border-radius: 3px;
     background-color: #fff;
     border: 1px solid #ccc;
