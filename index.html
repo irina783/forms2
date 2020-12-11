@@ -14,7 +14,7 @@
         <h1>Форми</h1>
         <div class="simple-form">
             <h2>01. проста форма</h2>
-            <form action="sendmail.php" method="post">
+            <form action="sendmail.php" method="POST">
                 <p><label class="simple"><input class="textinput" type="text" name="user_name"
                             placeholder="Введіть ім'я" maxlength="30" /></label></p>
                 <p><label class="simple"><input class="textinput" type="email" name="user_email" placeholder="Email"
@@ -48,7 +48,7 @@
             <form class="second clear" action="send.php" method="POST">
                 <div class="radio-buttons">
                     <p>
-                        <input class="delivery" type="radio" id="new_post" name="radio"/>
+                        <input class="delivery" type="radio" id="new_post" name="radio" />
                         <label for="new_post">Нова Пошта</label>
                     </p>
                     <p>
@@ -62,15 +62,15 @@
                 </div>
                 <div class="check-buttons">
                     <p>
-                        <input class="delivery2" type="checkbox" id="terms_contract"/>
+                        <input class="delivery2" type="checkbox" id="terms_contract" name="delivery2"/>
                         <label for="terms_contract">Прочитав умови договору</label>
                     </p>
                     <p>
-                        <input class="delivery2" type="checkbox" id="agree_VAT"/>
+                        <input class="delivery2" type="checkbox" id="agree_VAT" name="delivery2"/>
                         <label for="agree_VAT">Згідний з ПДВ 9%</label>
                     </p>
                     <p>
-                        <input class="delivery2" disabled type="checkbox" id="receive_news"/>
+                        <input class="delivery2" disabled type="checkbox" id="receive_news" name="delivery2"/>
                         <label for="receive_news">Отримувати новини на ел. пошту</label>
                     </p>
                 </div>
@@ -79,11 +79,11 @@
                         <tr>
                             <td>Статус</td>
                             <td>
-                                <input class="delivery2" type="checkbox" id="new_items"/>
+                                <input class="delivery2" type="checkbox" id="new_items" name="delivery2"/>
                                 <label for="new_items">Новинки</label>
-                                <input class="delivery2" type="checkbox" id="promotional-goods"/>
+                                <input class="delivery2" type="checkbox" id="promotional-goods" name="delivery2"/>
                                 <label for="promotional-goods">Акційні товари</label>
-                                <input class="delivery2" type="checkbox" id="sale"/>
+                                <input class="delivery2" type="checkbox" id="sale" name="delivery2"/>
                                 <label for="sale">Розпродаж</label>
                             </td>
                         </tr>
@@ -92,6 +92,7 @@
                             <td>
                                 <label for="date"></label>
                                 <input class="data" type="date" name="date" selected value="2018-03-17" id="date">
+                                <label class="button"><input class="secondsubmit" type="submit" value="Відправити" /></label> 
                             </td>
                         </tr>
                     </table>
@@ -102,6 +103,7 @@
         <hr>
         <div class="style-checkbox clear">
             <h2 class="st-checks">03. стилізовані чекбокси</h2>
+            <form action="">
             <div class="style-radio">
                 <p>
                     <input class="radio-man" type="radio" id="man" name="gender"/>
@@ -114,15 +116,15 @@
             </div>
             <div class="style-check">
                 <p>
-                    <input class="other" type="checkbox" id="news"/>
+                    <input class="other" type="checkbox" id="news" name=""/>
                     <label for="news">Отримувати новини</label>
                 </p>
                 <p>
-                    <input class="other" type="checkbox" id="buy"/>
+                    <input class="other" type="checkbox" id="buy" name=""/>
                     <label for="buy">Купити додому ковбаси</label>
                 </p>
                 <p>
-                    <input class="other" type="checkbox" id="light"/>
+                    <input class="other" type="checkbox" id="light" name=""/>
                     <label for="light">Включити світло</label>
                 </p>
             </div>

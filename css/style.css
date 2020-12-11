@@ -44,7 +44,7 @@ textarea{
 }
 .wrapper{
     margin: 0 auto;
-    max-width: 69.2%;
+    max-width: 73.2%;
 }
 h1{
     color: #1f222c;
@@ -650,7 +650,7 @@ select.country-select{
     position: fixed;
     top: 62px;
     left: auto;
-    right: 15.4%;
+    right: 13.4%;
     max-width: 310px;
     width: 100%;
 }
