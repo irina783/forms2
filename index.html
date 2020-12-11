@@ -22,8 +22,7 @@
                 <p class="city-select">
                     <label class="simple-select" for="city">
                         <select class="selectinput" id="city" name="city">
-                            <option class="option-simple" disabled selected value="your_city">Ваше
-                                місто</option>
+                            <option class="option-simple" disabled selected value="your_city">Ваше місто</option>
                             <option class="option-simple" value="kyiv">Київ</option>
                             <option class="option-simple" value="lviv">Львів</option>
                             <option class="option-simple" value="khm">Хмельницький</option>
@@ -32,7 +31,7 @@
                 </p>
                 <p>
                     <label class="simple">
-                        <textarea class="simple-textarea" name="comment" placeholder="Email"
+                        <textarea class="simple-textarea" name="comment" placeholder="Введіть текст повідомлення"
                             resize="vertical"></textarea>
                     </label>
                 </p>
@@ -165,10 +164,10 @@
                         </td>
                     </tr>               
                     <tr>
-                        <td><label for="file-button">Фото:</label></td>
+                        <td><label class="upload-button" for="file-button">Фото:</label></td>
                         <td>
                             <div class="upload-file">
-                                <label for="file-button">
+                                <label class="upload-button" for="file-button">
                                 <input class="upload" type="file" id="file-button" name="photo" />
                                 <span>Виберіть файл</span>
                                 </label>
@@ -200,7 +199,7 @@
                         <td><label for="phone">Телефон</label></td>
                     </tr>
                     <tr>
-                        <td><input class="tform-text5 table5" type="text" id="f_i" name="name5" value="Василь Вірастюк" required maxlength="30" /></td>
+                        <td><input class="tform-text5 table5" type="text" id="f_i" name="name5" required maxlength="30" /></td>
                         <td><input class="tform-text5 table5" type="email" id="mail" name="user_email5" required maxlength="30" /></td>
                         <td><input class="tform-text5 table5" type="tel" id="phone" name="user_tel5" required maxlength="15" /></td>
                     </tr>
@@ -245,14 +244,13 @@
                 </p>
             </form>
         </div>
-        <div class="fixed-forma">
-            <a class="close close-form6" href="#open-form6" id="close-form"></a>
+        <form class="fixed-forma" action="sign_in.php" method="post">
+            <input type="checkbox" id="close-form6">
+            <label class="close" for="close-form6"></label>
             <div class="fixed_form6" id="open-popup">
             <h2>06. фіксована форма</h2>
                 <div class="fixed_form">
-                    <a class="close close-form6"></a>
-                    <form class="form6" action="sign_in.php" method="post">
-                    
+                    <div class="form6">
                         <p><label for="fixed-login" class="fixed-label"><span class="fixed-span">Логін</span></label>
                         <p><input class="fixed" type="text" name="login" id="fixed-login" required maxlength="30" /></p>
                         <p><label for="fixed-pw" class="fixed-label"><span class="fixed-span">Пароль</span></label></p>
@@ -265,13 +263,10 @@
                         <p>
                             <label class="fixed-button"><input class="fixed-submit" type="submit" value="Увійти" /></label>
                         </p>
-                    
-                    </form>
+                    </div>
                 </div>
-                
             </div>
-            <a class="open-button" href="#open-popup" id="open-form6">Відкрити форму для входу</a>
-        </div>
+        </form>
     </div>
 </body>
 
