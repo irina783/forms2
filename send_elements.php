@@ -1,0 +1,12 @@
+<?php error_reporting(0);
+$radio = $_POST['radio'];
+$checkterms = $_POST['terms'];
+$checkagree = $_POST['agree'];
+$checknovinki = $_POST['novinki'];
+$checkgoods = $_POST['goods'];
+$checksales = $_POST['sales'];
+$data = $_POST['date'];
+$subj = "Second letter";
+$text = "Ваш спосіб доставки: ".$radio."<br>Ви відмітили: <br>".$checkterms."<br>".$checkagree."<br>Статус: <br>".$checknovinki."<br>".$checkgoods."<br>".$checksales."<br>Дата замовлення: ".$data;
+mail("ipolishuk790@gmail.com", $subj, $text, "Content-type: text/html; charset=utf-8 \r\n");
+echo($text);
